@@ -1,0 +1,17 @@
+<form class="container"
+      [formGroup]="form"
+      (ngSubmit)="onSubmit(form.value)">
+  <h1>Model-Driven Form</h1>
+  <input type="text" name="username" placeholder="username" formControlName="username">
+  <br>
+  <input type="text" name="password" placeholder="password" formControlName="password">
+  <br>
+  <select name="languages" formControlName="languages">
+    <option value="" disabled selected>Select desired language</option>
+    <option value="C++">C++</option>
+    <option value="Java">Java</option>
+    <option value="Python">Python</option>
+  </select>
+  <br><br>
+  <input type="submit" [disabled]="!form.valid" value="submit">
+</form>

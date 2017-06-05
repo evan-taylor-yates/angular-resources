@@ -1,0 +1,6 @@
+It's styleUrls, not stylesUrl/s
+
+"ng g c components/my-project/my-component --spec false"
+  '--spec false' prevents the test file from being created (my-component.spec.ts)
+  'components/my-project/' specifies which directory you want the component to be placed in
+    (default is 'app/')

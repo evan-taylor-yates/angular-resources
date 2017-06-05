@@ -1,0 +1,51 @@
+<h1>NOTE: *ngFor used in Component Iterator (see nav bar)</h1>
+<br>
+<br>
+<button style="margin: 20px" (click)="showArray = !showArray">{{getActionTag()}}</button>
+<h1>*ngIf</h1>
+<div>
+  <h2>'If...then...else' format: </h2>
+  <div *ngIf="showArray; then yesArray else noArray">
+    <div>
+      <h3>We can show the array</h3>
+    </div>
+  </div>
+  <ng-template #yesArray>
+    <h3>We can show the array</h3>
+  </ng-template>
+  <ng-template #noArray>
+    <h4>We cannot show the array</h4>
+  </ng-template>
+  <br>
+  <h2>'If...else' format: </h2>
+  <div *ngIf="showArray; else noArray">
+    <h3>We can show the array</h3>
+  </div>
+  <br>
+  <h2>'If...' format: </h2>
+  <div *ngIf="showArray">
+    <h3>We can show the array</h3>
+  </div>
+</div>
+<h1>*ngStyle (Attribute directive)</h1>
+<p [ngStyle]="{
+      'background-color': getColor(),
+      'color': 'white'
+      }">
+  Green background if we can show array! Red background otherwise!
+</p>
+<br>
+<h1>*ngClass (Class directive)</h1>
+<p [ngClass]="{
+testClass1: classNum === 1,
+testClass2: classNum === 2,
+testClass3: classNum === 3
+}">
+  This text can change colors :)
+</p>
+<label>Current Class: {{classNum}}</label>
+<button (click)="incrementClassNum()">Change</button>
+<br>
+
+
+

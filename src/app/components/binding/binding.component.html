@@ -1,0 +1,36 @@
+<h1>Four Types of Binding</h1>
+<h2>1: Interpolation</h2>
+<div style="margin-left: 50px">
+  <h3>The server ID is {{serverId}}</h3>
+  <h4>Click button to increase ID. The above line will respond to the changes.</h4>
+  <button (click)="increaseId()">+</button>
+</div>
+<h2>2: Property Binding</h2>
+<div style="margin-left: 50px">
+  <h4>'Add Server' Button only enabled when this.allowNewServer is true</h4>
+  <button [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+  <p>(Button is {{buttonStatus}})</p>
+</div>
+<br>
+<h2>3: Event Binding</h2>
+<div style="margin-left: 50px">
+  <h3>By binding the changeAllowance function to a click, the below button will toggle the allowNewServer boolean</h3>
+  <button (click)="changeAllowance()">{{getText()}}</button>
+</div>
+<br>
+<h2>4: Data Binding</h2>
+<div style="margin-left: 50px">
+  <h3>A. One-Way Data Binding</h3>
+  <div style="margin-left: 50px">
+    <h4>Whatever is entered in the field will be reflected in this.serverName</h4>
+    <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+    <p>Server Name: {{serverName}}</p>
+  </div>
+  <br>
+  <h3>B. Two-Way Data Binding</h3>
+  <div style="margin-left: 50px">
+    <h4>this.serverName reflects the content of the input field and the input field reflects the content of this.serverName</h4>
+    <input type="text" class="form-control" [(ngModel)]="serverName">
+    <p>Server Name: {{serverName}}</p>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+div {
+  margin-left: 50px;
+}
+p {
+  font-size: 30px;
+}
+.testClass1 {
+  color: #039be5;
+  background-color: slategray;
+}
+.testClass2 {
+  color: aquamarine;
+  background-color: slategray;
+}
+.testClass3 {
+  color: lightgreen;
+  background-color: slategray;
+}

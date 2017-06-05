@@ -1,0 +1,6 @@
+Concepts applied in this component (along with child components):
+ -Passing data from a child component to its parent component
+ -Passing data from a parnet component to its child component
+ -Changing stylesheet settings using ViewEncapsulation module (see server-element.component.ts)
+ -Local References (cockpit.component.ts) #thisIsTheFormatOfALocalReferenceButItsTooLong
+  -Local References can only be used WITHIN THE TEMPLATE

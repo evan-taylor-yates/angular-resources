@@ -1,0 +1,17 @@
+<form class="container"
+      #userForm="ngForm"
+      (ngSubmit)="onSubmit(userForm.value)">
+  <h1>Template-Driven Form</h1>
+  <input type="text" name="username" placeholder="username" ngModel>
+  <br>
+  <input type="text" name="password" placeholder="password" ngModel>
+  <br>
+  <select name="languages" ngModel >
+    <option value="" disabled selected>Select desired language</option>
+    <option value="C++">C++</option>
+    <option value="Java">Java</option>
+    <option value="Python">Python</option>
+  </select>
+  <br><br>
+  <input type="submit" value="submit">
+</form>

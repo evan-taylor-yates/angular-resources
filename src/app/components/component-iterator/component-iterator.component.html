@@ -1,0 +1,17 @@
+<form class="container"
+      [formGroup]="form"
+      (ngSubmit)="onSubmit(form.value)">
+  <h1>Component Iterator</h1>
+  <input type="text" name="itemName" placeholder="Enter new item here..." formControlName="itemName">
+  <br>
+  <input type="submit" [disabled]="!form.valid" value="submit">
+</form>
+<item *ngFor="let item of items; let i = index"
+      class="container"
+      [ngClass]="{
+      'okay': isOdd(i),
+      'ha': !isOdd(i)
+      }"
+>
+  Loading...
+</item>
